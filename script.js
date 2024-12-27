@@ -1,4 +1,3 @@
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -99,6 +98,25 @@ document.addEventListener('DOMContentLoaded', () => {
         argonBar.style.width = '90%';
         competitorBar.style.width = '40%';
     }
+
+    
+    document.querySelectorAll('.scroll-to-pricing').forEach(button => {
+        button.addEventListener('click', () => {
+            document.querySelector('#pricing').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    });
+
+    document.querySelectorAll('.scroll-to-showcase').forEach(button => {
+        button.addEventListener('click', () => {
+            document.querySelector('#showcase').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    });
 });
 
 const buttons = document.querySelectorAll('.btn-primary, .btn-outline');
